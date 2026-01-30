@@ -35,7 +35,6 @@ body.dark-mode .lotto-machine {
 h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #333;
     margin-bottom: 2rem;
     transition: color 0.3s ease;
 }
@@ -47,6 +46,7 @@ body.dark-mode h1 {
 .display {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
@@ -73,21 +73,6 @@ body.dark-mode h1 {
 
 .draw-button:active {
     transform: translateY(0);
-}
-
-/* Lotto Ball Web Component Styles */
-lotto-ball {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 @keyframes pop-in {
