@@ -6,6 +6,13 @@ body {
     min-height: 100vh;
     background-color: #f0f2f5;
     background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z" fill="%23e0e0e0" fill-opacity="0.4"/%3E%3C/svg%3E');
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f2f5;
+    background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z" fill="%23333" fill-opacity="0.4"/%3E%3C/svg%3E');
 }
 
 .lotto-machine {
@@ -17,6 +24,12 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
     text-align: center;
     border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .lotto-machine {
+    background: #2c2c2c;
+    border-color: #444;
 }
 
 h1 {
@@ -24,6 +37,11 @@ h1 {
     font-weight: 800;
     color: #333;
     margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode h1 {
+    color: #f0f2f5;
 }
 
 .display {
@@ -81,4 +99,23 @@ lotto-ball {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.theme-switcher {
+    margin-top: 2rem;
+}
+
+#theme-toggle {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #444;
+    color: #f0f2f5;
 }
