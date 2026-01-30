@@ -125,3 +125,17 @@ body.dark-mode #theme-toggle {
     background-color: #444;
     color: #f0f2f5;
 }
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+#drop-area.highlight {
+    border-color: #6a11cb;
+}
