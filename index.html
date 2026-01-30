@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinner Menu Recommendation</title>
+    <title data-i18n="title">Dinner Menu Recommendation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="language-switcher">
+        <button id="lang-ko">Korean</button>
+        <button id="lang-en">English</button>
+    </div>
     <div class="lotto-machine">
-        <h1>Dinner Menu Recommendation</h1>
+        <h1 data-i18n="heading">Dinner Menu Recommendation</h1>
         <div id="menu-recommendation" class="display"></div>
-        <button id="recommend-button" class="draw-button">Get Recommendation</button>
+        <button id="recommend-button" class="draw-button" data-i18n="button">Get Recommendation</button>
     </div>
     <div class="theme-switcher">
-        <button id="theme-toggle">Toggle Theme</button>
+        <button id="theme-toggle" data-i18n="theme_toggle">Toggle Theme</button>
     </div>
     <script src="main.js" type="module"></script>
 </body>

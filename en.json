@@ -1,0 +1,18 @@
+{
+    "title": "Dinner Menu Recommendation",
+    "heading": "Dinner Menu Recommendation",
+    "button": "Get Recommendation",
+    "theme_toggle": "Toggle Theme",
+    "dinner_menus": [
+        "Chicken",
+        "Pizza",
+        "Sushi",
+        "Pasta",
+        "Burger",
+        "Taco",
+        "Steak",
+        "Salad",
+        "Ramen",
+        "Fried Rice"
+    ]
+}
