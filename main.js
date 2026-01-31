@@ -6,7 +6,6 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const langKoButton = document.getElementById('lang-ko');
 const langEnButton = document.getElementById('lang-en');
-const dropArea = document.getElementById('drop-area');
 
 async function setLanguage(lang) {
     const response = await fetch(`${lang}.json`);
@@ -23,7 +22,9 @@ async function setLanguage(lang) {
         }
     });
 
-    dinnerMenus = data.dinner_menus;
+    if (data.dinner_menus) {
+        dinnerMenus = data.dinner_menus;
+    }
     localStorage.setItem('language', lang);
 }
 
@@ -64,42 +65,6 @@ themeToggle.addEventListener('click', () => {
         localStorage.removeItem('theme');
     }
 });
-
-langKoButton.addEventListener('click', () => setLanguage('ko'));
-langEnButton.addEventListener('click', () => setLanguage('en'));
-
-// Drag and drop
-dropArea.addEventListener('dragover', (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-    dropArea.classList.add('highlight');
-});
-
-dropArea.addEventListener('dragleave', (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-    dropArea.classList.remove('highlight');
-});
-
-dropArea.addEventListener('drop', (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-    dropArea.classList.remove('highlight');
-
-    const files = event.dataTransfer.files;
-    if (files.length > 0) {
-        const file = files[0];
-        if (file.type.startsWith('image/')) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                dinnerMenus.push(e.target.result);
-                alert('Image added to the menu!');
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-});
-
 
 // Initial load
 const savedTheme = localStorage.getItem('theme');

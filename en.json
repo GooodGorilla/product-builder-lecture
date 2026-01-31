@@ -3,16 +3,9 @@
     "heading": "Dinner Menu Recommendation",
     "button": "Get Recommendation",
     "theme_toggle": "Toggle Theme",
-    "dinner_menus": [
-        "Chicken",
-        "Pizza",
-        "Sushi",
-        "Pasta",
-        "Burger",
-        "Taco",
-        "Steak",
-        "Salad",
-        "Ramen",
-        "Fried Rice"
-    ]
+    "contact_heading": "Partnership Inquiry",
+    "name_label": "Your Name:",
+    "email_label": "Your Email:",
+    "message_label": "Your Message:",
+    "send_button": "Send"
 }

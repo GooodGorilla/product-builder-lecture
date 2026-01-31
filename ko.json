@@ -3,16 +3,9 @@
     "heading": "저녁 메뉴 추천",
     "button": "추천 받기",
     "theme_toggle": "테마 변경",
-    "dinner_menus": [
-        "치킨",
-        "피자",
-        "스시",
-        "파스타",
-        "버거",
-        "타코",
-        "스테이크",
-        "샐러드",
-        "라면",
-        "볶음밥"
-    ]
+    "contact_heading": "제휴 문의",
+    "name_label": "이름:",
+    "email_label": "이메일:",
+    "message_label": "메시지:",
+    "send_button": "보내기"
 }

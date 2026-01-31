@@ -139,3 +139,104 @@ body.dark-mode #theme-toggle {
 #drop-area.highlight {
     border-color: #6a11cb;
 }
+
+/* Formspree Contact Form Styles */
+.contact-form-section {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
+    text-align: left; /* Changed to left for form labels */
+    border: 1px solid #e0e0e0;
+    margin-top: 2rem; /* Add some space from the previous section */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .contact-form-section {
+    background: #2c2c2c;
+    border-color: #444;
+}
+
+.contact-form-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+body.dark-mode .contact-form-section h2 {
+    color: #f0f2f5;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+body.dark-mode .contact-form label {
+    color: #ccc;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .contact-form input[type="text"],
+body.dark-mode .contact-form input[type="email"],
+body.dark-mode .contact-form textarea {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #f0f2f5;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.2);
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+.contact-form button[type="submit"] {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px 0 rgba(106, 17, 203, 0.45);
+    width: 100%;
+}
+
+.contact-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(106, 17, 203, 0.55);
+}
+
+.contact-form button[type="submit"]:active {
+    transform: translateY(0);
+}
