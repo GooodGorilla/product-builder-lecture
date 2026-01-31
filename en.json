@@ -7,5 +7,12 @@
     "name_label": "Your Name:",
     "email_label": "Your Email:",
     "message_label": "Your Message:",
-    "send_button": "Send"
+    "send_button": "Send",
+    "dinner_menus": [
+        "Steak",
+        "Pasta",
+        "Pizza",
+        "Salad",
+        "Sushi"
+    ]
 }

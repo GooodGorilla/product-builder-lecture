@@ -14,7 +14,8 @@ async function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (data[key]) {
-            if (el.tagName === 'TITLE') {
+            // Use textContent for most elements, innerHTML for specific cases if needed
+            if (el.tagName === 'TITLE' || el.tagName === 'BUTTON' || el.tagName === 'LABEL' || el.tagName === 'H1' || el.tagName === 'H2') {
                 el.textContent = data[key];
             } else {
                 el.innerHTML = data[key];
@@ -26,7 +27,11 @@ async function setLanguage(lang) {
         dinnerMenus = data.dinner_menus;
     }
     localStorage.setItem('language', lang);
+    document.documentElement.lang = lang; // Update the lang attribute of the <html> tag
 }
+
+langKoButton.addEventListener('click', () => setLanguage('ko'));
+langEnButton.addEventListener('click', () => setLanguage('en'));
 
 recommendButton.addEventListener('click', () => {
     recommendButton.disabled = true;

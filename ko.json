@@ -7,5 +7,12 @@
     "name_label": "이름:",
     "email_label": "이메일:",
     "message_label": "메시지:",
-    "send_button": "보내기"
+    "send_button": "보내기",
+    "dinner_menus": [
+        "김치찌개",
+        "된장찌개",
+        "비빔밥",
+        "불고기",
+        "치킨"
+    ]
 }
