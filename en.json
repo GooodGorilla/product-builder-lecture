@@ -13,6 +13,6 @@
         { "name": "Pasta", "image": "https://cdn.pixabay.com/photo/2016/04/02/15/13/noodle-1303003_1280.jpg" },
         { "name": "Pizza", "image": "images/pizza-5275191_1920.jpg" },
         { "name": "Salad", "image": "https://via.placeholder.com/150/00FF00/000000?Text=Salad" },
-        { "name": "Sushi", "image": "https://via.placeholder.com/150/FF00FF/FFFFFF?Text=Sushi" }
+        { "name": "Sushi", "image": "images/sushi-9761708_1920.png" }
     ]
 }

@@ -13,6 +13,7 @@
         { "name": "된장찌개", "image": "https://via.placeholder.com/150/8B4513/FFFFFF?Text=Doenjang+Jjigae" },
         { "name": "비빔밥", "image": "https://via.placeholder.com/150/32CD32/FFFFFF?Text=Bibimbap" },
         { "name": "불고기", "image": "https://via.placeholder.com/150/A52A2A/FFFFFF?Text=Bulgogi" },
-        { "name": "치킨", "image": "https://via.placeholder.com/150/FFD700/000000?Text=Chicken" }
+        { "name": "치킨", "image": "https://via.placeholder.com/150/FFD700/000000?Text=Chicken" },
+        { "name": "스시", "image": "images/sushi-9761708_1920.png" }
     ]
 }
