@@ -82,6 +82,31 @@ ul {
     transition: 0.3s;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 5px;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #667eea;
+    color: #667eea;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -523,6 +548,10 @@ ul {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -539,8 +568,15 @@ ul {
         display: flex;
     }
 
+    .lang-switcher {
+        order: 2;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
     .mobile-menu-btn {
         display: flex;
+        order: 3;
     }
 
     .mobile-menu-btn.active span:nth-child(1) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>소개 - FunTest</title>
-    <meta name="description" content="FunTest는 AI 기술을 활용한 재미있는 테스트 서비스입니다. 동물상 테스트, 메뉴 추천 등 다양한 콘텐츠를 제공합니다.">
+    <meta name="description" content="FunTest는 AI 기술을 활용한 재미있는 테스트 서비스입니다.">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7091768814337632"
      crossorigin="anonymous"></script>
@@ -15,11 +15,15 @@
         <div class="nav-container">
             <a href="index.html" class="logo">FunTest</a>
             <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="animal.html">동물상 테스트</a></li>
-                <li><a href="about.html" class="active">소개</a></li>
-                <li><a href="contact.html">문의</a></li>
+                <li><a href="index.html" data-i18n="nav_home">홈</a></li>
+                <li><a href="animal.html" data-i18n="nav_animal_test">동물상 테스트</a></li>
+                <li><a href="about.html" class="active" data-i18n="nav_about">소개</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">문의</a></li>
             </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
             <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -29,33 +33,33 @@
     </nav>
 
     <div class="page-container">
-        <h1>FunTest 소개</h1>
+        <h1 data-i18n="about_page_title">FunTest 소개</h1>
 
-        <h2>우리의 미션</h2>
-        <p>FunTest는 최신 인공지능 기술을 누구나 쉽고 재미있게 경험할 수 있도록 하는 것을 목표로 합니다. 복잡한 기술을 친근하고 재미있는 방식으로 제공하여, 사용자들이 AI의 가능성을 직접 체험할 수 있도록 합니다.</p>
+        <h2 data-i18n="mission_title">우리의 미션</h2>
+        <p data-i18n="mission_desc">FunTest는 최신 인공지능 기술을 누구나 쉽고 재미있게 경험할 수 있도록 하는 것을 목표로 합니다. 복잡한 기술을 친근하고 재미있는 방식으로 제공하여, 사용자들이 AI의 가능성을 직접 체험할 수 있도록 합니다.</p>
 
-        <h2>우리가 하는 일</h2>
-        <p>FunTest는 다양한 AI 기반 테스트와 도구를 개발하고 제공합니다. 현재 제공하는 주요 서비스는 다음과 같습니다:</p>
+        <h2 data-i18n="what_we_do_title">우리가 하는 일</h2>
+        <p data-i18n="what_we_do_desc">FunTest는 다양한 AI 기반 테스트와 도구를 개발하고 제공합니다. 현재 제공하는 주요 서비스는 다음과 같습니다:</p>
         <ul>
-            <li><strong>동물상 테스트:</strong> Google Teachable Machine을 활용한 이미지 분류 AI로 사용자의 동물상을 분석합니다. 강아지상과 고양이상 중 어느 쪽에 더 가까운지 재미있게 알아볼 수 있습니다.</li>
-            <li><strong>저녁 메뉴 추천:</strong> 매일 고민되는 저녁 메뉴 선택을 도와드립니다. 다양한 음식 카테고리에서 랜덤으로 메뉴를 추천받아보세요.</li>
+            <li><strong data-i18n="nav_animal_test">동물상 테스트:</strong> <span data-i18n="service_animal">Google Teachable Machine을 활용한 이미지 분류 AI로 사용자의 동물상을 분석합니다. 강아지상과 고양이상 중 어느 쪽에 더 가까운지 재미있게 알아볼 수 있습니다.</span></li>
+            <li><strong data-i18n="menu_test_title">저녁 메뉴 추천:</strong> <span data-i18n="service_menu">매일 고민되는 저녁 메뉴 선택을 도와드립니다. 다양한 음식 카테고리에서 랜덤으로 메뉴를 추천받아보세요.</span></li>
         </ul>
 
-        <h2>사용된 기술</h2>
-        <p>FunTest는 다음과 같은 기술을 활용하여 서비스를 제공합니다:</p>
+        <h2 data-i18n="tech_title">사용된 기술</h2>
+        <p data-i18n="tech_desc">FunTest는 다음과 같은 기술을 활용하여 서비스를 제공합니다:</p>
         <ul>
-            <li><strong>TensorFlow.js:</strong> 브라우저에서 직접 머신러닝 모델을 실행할 수 있게 해주는 JavaScript 라이브러리입니다.</li>
-            <li><strong>Google Teachable Machine:</strong> 누구나 쉽게 머신러닝 모델을 만들 수 있도록 Google에서 제공하는 웹 기반 도구입니다.</li>
-            <li><strong>반응형 웹 디자인:</strong> 모든 기기에서 최적의 사용자 경험을 제공하기 위해 반응형 디자인을 적용했습니다.</li>
+            <li><strong>TensorFlow.js:</strong> <span data-i18n="tech_tf">브라우저에서 직접 머신러닝 모델을 실행할 수 있게 해주는 JavaScript 라이브러리입니다.</span></li>
+            <li><strong>Google Teachable Machine:</strong> <span data-i18n="tech_tm">누구나 쉽게 머신러닝 모델을 만들 수 있도록 Google에서 제공하는 웹 기반 도구입니다.</span></li>
+            <li><strong>Responsive Web Design:</strong> <span data-i18n="tech_responsive">모든 기기에서 최적의 사용자 경험을 제공하기 위해 반응형 디자인을 적용했습니다.</span></li>
         </ul>
 
-        <h2>개인정보 보호</h2>
-        <p>FunTest는 사용자의 개인정보 보호를 최우선으로 생각합니다. 동물상 테스트에서 사용되는 이미지는 서버에 저장되지 않으며, 모든 분석은 사용자의 브라우저에서 직접 이루어집니다. 분석이 완료되면 이미지 데이터는 자동으로 삭제됩니다.</p>
-        <p>자세한 내용은 <a href="privacy.html" class="text-link">개인정보처리방침</a>을 참고해주세요.</p>
+        <h2 data-i18n="privacy_title">개인정보 보호</h2>
+        <p data-i18n="privacy_about_desc">FunTest는 사용자의 개인정보 보호를 최우선으로 생각합니다. 동물상 테스트에서 사용되는 이미지는 서버에 저장되지 않으며, 모든 분석은 사용자의 브라우저에서 직접 이루어집니다. 분석이 완료되면 이미지 데이터는 자동으로 삭제됩니다.</p>
+        <p><span data-i18n="privacy_link">자세한 내용은 </span><a href="privacy.html" class="text-link" data-i18n="footer_privacy">개인정보처리방침</a><span>을 참고해주세요.</span></p>
 
-        <h2>연락처</h2>
-        <p>FunTest에 대한 문의사항이나 제안이 있으시면 언제든지 연락해주세요. 사용자 여러분의 피드백은 저희 서비스를 개선하는 데 큰 도움이 됩니다.</p>
-        <p><a href="contact.html" class="text-link">문의하기 →</a></p>
+        <h2 data-i18n="contact_title">연락처</h2>
+        <p data-i18n="contact_about_desc">FunTest에 대한 문의사항이나 제안이 있으시면 언제든지 연락해주세요. 사용자 여러분의 피드백은 저희 서비스를 개선하는 데 큰 도움이 됩니다.</p>
+        <p><a href="contact.html" class="text-link" data-i18n="contact_link">문의하기 →</a></p>
     </div>
 
     <!-- Footer -->
@@ -63,31 +67,32 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>FunTest</h4>
-                <p>AI 기반 재미있는 테스트 서비스</p>
+                <p data-i18n="footer_description">AI 기반 재미있는 테스트 서비스</p>
             </div>
             <div class="footer-section">
-                <h4>바로가기</h4>
+                <h4 data-i18n="footer_links">바로가기</h4>
                 <ul>
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="animal.html">동물상 테스트</a></li>
-                    <li><a href="menu.html">메뉴 추천</a></li>
-                    <li><a href="about.html">소개</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">홈</a></li>
+                    <li><a href="animal.html" data-i18n="nav_animal_test">동물상 테스트</a></li>
+                    <li><a href="menu.html" data-i18n="menu_test_title">메뉴 추천</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">소개</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>고객지원</h4>
+                <h4 data-i18n="footer_support">고객지원</h4>
                 <ul>
-                    <li><a href="contact.html">문의하기</a></li>
-                    <li><a href="privacy.html">개인정보처리방침</a></li>
-                    <li><a href="terms.html">이용약관</a></li>
+                    <li><a href="contact.html" data-i18n="footer_contact">문의하기</a></li>
+                    <li><a href="privacy.html" data-i18n="footer_privacy">개인정보처리방침</a></li>
+                    <li><a href="terms.html" data-i18n="footer_terms">이용약관</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 FunTest. All rights reserved.</p>
+            <p data-i18n="footer_copyright">© 2024 FunTest. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');

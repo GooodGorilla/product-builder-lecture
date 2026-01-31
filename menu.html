@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>저녁 메뉴 추천 - FunTest</title>
-    <meta name="description" content="오늘 저녁 뭐 먹지? AI가 추천하는 저녁 메뉴로 매일의 고민을 해결하세요. 한식, 양식, 중식 등 다양한 메뉴를 랜덤으로 추천받아보세요.">
+    <meta name="description" content="오늘 저녁 뭐 먹지? AI가 추천하는 저녁 메뉴로 매일의 고민을 해결하세요.">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7091768814337632"
      crossorigin="anonymous"></script>
@@ -15,11 +15,15 @@
         <div class="nav-container">
             <a href="index.html" class="logo">FunTest</a>
             <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="animal.html">동물상 테스트</a></li>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="contact.html">문의</a></li>
+                <li><a href="index.html" data-i18n="nav_home">홈</a></li>
+                <li><a href="animal.html" data-i18n="nav_animal_test">동물상 테스트</a></li>
+                <li><a href="about.html" data-i18n="nav_about">소개</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">문의</a></li>
             </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
             <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -29,29 +33,29 @@
     </nav>
 
     <div class="page-container">
-        <h1>저녁 메뉴 추천</h1>
-        <p>매일 반복되는 "오늘 저녁 뭐 먹지?" 고민, FunTest가 해결해 드립니다! 버튼 한 번으로 다양한 메뉴 중에서 오늘의 저녁 메뉴를 추천받아보세요.</p>
+        <h1 data-i18n="menu_page_title">저녁 메뉴 추천</h1>
+        <p data-i18n="menu_page_desc">매일 반복되는 "오늘 저녁 뭐 먹지?" 고민, FunTest가 해결해 드립니다! 버튼 한 번으로 다양한 메뉴 중에서 오늘의 저녁 메뉴를 추천받아보세요.</p>
 
         <div class="menu-container">
             <div class="menu-display" id="menu-display">
-                <p style="color: #888; font-size: 1.2rem;">버튼을 눌러 메뉴를 추천받으세요!</p>
+                <p style="color: #888; font-size: 1.2rem;" data-i18n="menu_placeholder">버튼을 눌러 메뉴를 추천받으세요!</p>
             </div>
-            <button class="recommend-btn" id="recommend-btn">메뉴 추천받기</button>
+            <button class="recommend-btn" id="recommend-btn" data-i18n="menu_recommend_btn">메뉴 추천받기</button>
         </div>
 
-        <h2>추천 메뉴 카테고리</h2>
-        <p>FunTest의 메뉴 추천은 다양한 카테고리의 음식을 포함합니다:</p>
+        <h2 data-i18n="menu_category_title">추천 메뉴 카테고리</h2>
+        <p data-i18n="menu_category_desc">FunTest의 메뉴 추천은 다양한 카테고리의 음식을 포함합니다:</p>
         <ul>
-            <li><strong>한식:</strong> 김치찌개, 된장찌개, 불고기, 비빔밥, 삼겹살, 칼국수, 냉면 등</li>
-            <li><strong>중식:</strong> 짜장면, 짬뽕, 탕수육, 마파두부, 볶음밥, 양장피 등</li>
-            <li><strong>일식:</strong> 초밥, 라멘, 우동, 돈까스, 덮밥, 오코노미야키 등</li>
-            <li><strong>양식:</strong> 파스타, 피자, 스테이크, 햄버거, 리조또, 샐러드 등</li>
-            <li><strong>분식:</strong> 떡볶이, 순대, 김밥, 라면, 튀김, 오뎅 등</li>
-            <li><strong>기타:</strong> 치킨, 족발, 보쌈, 샤브샤브, 쌀국수, 카레 등</li>
+            <li><strong data-i18n="menu_korean">한식:</strong> <span data-i18n="menu_korean_items">김치찌개, 된장찌개, 불고기, 비빔밥, 삼겹살, 칼국수, 냉면 등</span></li>
+            <li><strong data-i18n="menu_chinese">중식:</strong> <span data-i18n="menu_chinese_items">짜장면, 짬뽕, 탕수육, 마파두부, 볶음밥, 양장피 등</span></li>
+            <li><strong data-i18n="menu_japanese">일식:</strong> <span data-i18n="menu_japanese_items">초밥, 라멘, 우동, 돈까스, 덮밥, 오코노미야키 등</span></li>
+            <li><strong data-i18n="menu_western">양식:</strong> <span data-i18n="menu_western_items">파스타, 피자, 스테이크, 햄버거, 리조또, 샐러드 등</span></li>
+            <li><strong data-i18n="menu_snack">분식:</strong> <span data-i18n="menu_snack_items">떡볶이, 순대, 김밥, 라면, 튀김, 오뎅 등</span></li>
+            <li><strong data-i18n="menu_other">기타:</strong> <span data-i18n="menu_other_items">치킨, 족발, 보쌈, 샤브샤브, 쌀국수, 카레 등</span></li>
         </ul>
 
-        <h2>메뉴 추천 팁</h2>
-        <p>추천받은 메뉴가 마음에 들지 않는다면 다시 버튼을 눌러보세요. 새로운 메뉴가 추천됩니다. 가족이나 친구와 함께 식사할 때는 여러 번 추천받아서 다수결로 결정하는 것도 좋은 방법입니다!</p>
+        <h2 data-i18n="menu_tip_title">메뉴 추천 팁</h2>
+        <p data-i18n="menu_tip_desc">추천받은 메뉴가 마음에 들지 않는다면 다시 버튼을 눌러보세요. 새로운 메뉴가 추천됩니다. 가족이나 친구와 함께 식사할 때는 여러 번 추천받아서 다수결로 결정하는 것도 좋은 방법입니다!</p>
     </div>
 
     <!-- Footer -->
@@ -59,88 +63,130 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>FunTest</h4>
-                <p>AI 기반 재미있는 테스트 서비스</p>
+                <p data-i18n="footer_description">AI 기반 재미있는 테스트 서비스</p>
             </div>
             <div class="footer-section">
-                <h4>바로가기</h4>
+                <h4 data-i18n="footer_links">바로가기</h4>
                 <ul>
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="animal.html">동물상 테스트</a></li>
-                    <li><a href="menu.html">메뉴 추천</a></li>
-                    <li><a href="about.html">소개</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">홈</a></li>
+                    <li><a href="animal.html" data-i18n="nav_animal_test">동물상 테스트</a></li>
+                    <li><a href="menu.html" data-i18n="menu_test_title">메뉴 추천</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">소개</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>고객지원</h4>
+                <h4 data-i18n="footer_support">고객지원</h4>
                 <ul>
-                    <li><a href="contact.html">문의하기</a></li>
-                    <li><a href="privacy.html">개인정보처리방침</a></li>
-                    <li><a href="terms.html">이용약관</a></li>
+                    <li><a href="contact.html" data-i18n="footer_contact">문의하기</a></li>
+                    <li><a href="privacy.html" data-i18n="footer_privacy">개인정보처리방침</a></li>
+                    <li><a href="terms.html" data-i18n="footer_terms">이용약관</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 FunTest. All rights reserved.</p>
+            <p data-i18n="footer_copyright">© 2024 FunTest. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
             this.classList.toggle('active');
         });
 
-        const menus = [
-            { name: "김치찌개", category: "한식" },
-            { name: "된장찌개", category: "한식" },
-            { name: "불고기", category: "한식" },
-            { name: "비빔밥", category: "한식" },
-            { name: "삼겹살", category: "한식" },
-            { name: "칼국수", category: "한식" },
-            { name: "냉면", category: "한식" },
-            { name: "제육볶음", category: "한식" },
-            { name: "순두부찌개", category: "한식" },
-            { name: "갈비찜", category: "한식" },
-            { name: "짜장면", category: "중식" },
-            { name: "짬뽕", category: "중식" },
-            { name: "탕수육", category: "중식" },
-            { name: "마파두부", category: "중식" },
-            { name: "볶음밥", category: "중식" },
-            { name: "양장피", category: "중식" },
-            { name: "깐풍기", category: "중식" },
-            { name: "초밥", category: "일식" },
-            { name: "라멘", category: "일식" },
-            { name: "우동", category: "일식" },
-            { name: "돈까스", category: "일식" },
-            { name: "규동", category: "일식" },
-            { name: "오코노미야키", category: "일식" },
-            { name: "파스타", category: "양식" },
-            { name: "피자", category: "양식" },
-            { name: "스테이크", category: "양식" },
-            { name: "햄버거", category: "양식" },
-            { name: "리조또", category: "양식" },
-            { name: "샐러드", category: "양식" },
-            { name: "떡볶이", category: "분식" },
-            { name: "순대", category: "분식" },
-            { name: "김밥", category: "분식" },
-            { name: "라면", category: "분식" },
-            { name: "튀김", category: "분식" },
-            { name: "치킨", category: "기타" },
-            { name: "족발", category: "기타" },
-            { name: "보쌈", category: "기타" },
-            { name: "샤브샤브", category: "기타" },
-            { name: "쌀국수", category: "기타" },
-            { name: "카레", category: "기타" },
-            { name: "부대찌개", category: "한식" },
-            { name: "감자탕", category: "한식" },
-            { name: "곱창", category: "한식" },
-            { name: "닭볶음탕", category: "한식" },
-            { name: "아구찜", category: "한식" }
-        ];
+        const menus = {
+            ko: [
+                { name: "김치찌개", category: "한식" },
+                { name: "된장찌개", category: "한식" },
+                { name: "불고기", category: "한식" },
+                { name: "비빔밥", category: "한식" },
+                { name: "삼겹살", category: "한식" },
+                { name: "칼국수", category: "한식" },
+                { name: "냉면", category: "한식" },
+                { name: "제육볶음", category: "한식" },
+                { name: "순두부찌개", category: "한식" },
+                { name: "갈비찜", category: "한식" },
+                { name: "짜장면", category: "중식" },
+                { name: "짬뽕", category: "중식" },
+                { name: "탕수육", category: "중식" },
+                { name: "마파두부", category: "중식" },
+                { name: "볶음밥", category: "중식" },
+                { name: "양장피", category: "중식" },
+                { name: "깐풍기", category: "중식" },
+                { name: "초밥", category: "일식" },
+                { name: "라멘", category: "일식" },
+                { name: "우동", category: "일식" },
+                { name: "돈까스", category: "일식" },
+                { name: "규동", category: "일식" },
+                { name: "오코노미야키", category: "일식" },
+                { name: "파스타", category: "양식" },
+                { name: "피자", category: "양식" },
+                { name: "스테이크", category: "양식" },
+                { name: "햄버거", category: "양식" },
+                { name: "리조또", category: "양식" },
+                { name: "샐러드", category: "양식" },
+                { name: "떡볶이", category: "분식" },
+                { name: "순대", category: "분식" },
+                { name: "김밥", category: "분식" },
+                { name: "라면", category: "분식" },
+                { name: "튀김", category: "분식" },
+                { name: "치킨", category: "기타" },
+                { name: "족발", category: "기타" },
+                { name: "보쌈", category: "기타" },
+                { name: "샤브샤브", category: "기타" },
+                { name: "쌀국수", category: "기타" },
+                { name: "카레", category: "기타" }
+            ],
+            en: [
+                { name: "Kimchi Stew", category: "Korean" },
+                { name: "Soybean Paste Stew", category: "Korean" },
+                { name: "Bulgogi", category: "Korean" },
+                { name: "Bibimbap", category: "Korean" },
+                { name: "Samgyeopsal", category: "Korean" },
+                { name: "Kalguksu", category: "Korean" },
+                { name: "Naengmyeon", category: "Korean" },
+                { name: "Spicy Pork", category: "Korean" },
+                { name: "Soft Tofu Stew", category: "Korean" },
+                { name: "Braised Ribs", category: "Korean" },
+                { name: "Jajangmyeon", category: "Chinese" },
+                { name: "Jjamppong", category: "Chinese" },
+                { name: "Sweet & Sour Pork", category: "Chinese" },
+                { name: "Mapo Tofu", category: "Chinese" },
+                { name: "Fried Rice", category: "Chinese" },
+                { name: "Yangjangpi", category: "Chinese" },
+                { name: "Crispy Chicken", category: "Chinese" },
+                { name: "Sushi", category: "Japanese" },
+                { name: "Ramen", category: "Japanese" },
+                { name: "Udon", category: "Japanese" },
+                { name: "Tonkatsu", category: "Japanese" },
+                { name: "Gyudon", category: "Japanese" },
+                { name: "Okonomiyaki", category: "Japanese" },
+                { name: "Pasta", category: "Western" },
+                { name: "Pizza", category: "Western" },
+                { name: "Steak", category: "Western" },
+                { name: "Hamburger", category: "Western" },
+                { name: "Risotto", category: "Western" },
+                { name: "Salad", category: "Western" },
+                { name: "Tteokbokki", category: "Street Food" },
+                { name: "Sundae", category: "Street Food" },
+                { name: "Gimbap", category: "Street Food" },
+                { name: "Ramyeon", category: "Street Food" },
+                { name: "Fried Foods", category: "Street Food" },
+                { name: "Fried Chicken", category: "Others" },
+                { name: "Jokbal", category: "Others" },
+                { name: "Bossam", category: "Others" },
+                { name: "Shabu-shabu", category: "Others" },
+                { name: "Pho", category: "Others" },
+                { name: "Curry", category: "Others" }
+            ]
+        };
 
         document.getElementById('recommend-btn').addEventListener('click', function() {
-            const randomIndex = Math.floor(Math.random() * menus.length);
-            const selectedMenu = menus[randomIndex];
+            const lang = window.i18n.getCurrentLanguage();
+            const menuList = menus[lang] || menus.ko;
+            const randomIndex = Math.floor(Math.random() * menuList.length);
+            const selectedMenu = menuList[randomIndex];
 
             const display = document.getElementById('menu-display');
             display.innerHTML = `
@@ -148,9 +194,8 @@
                 <div class="menu-category">${selectedMenu.category}</div>
             `;
 
-            // Animation
             display.style.animation = 'none';
-            display.offsetHeight; // Trigger reflow
+            display.offsetHeight;
             display.style.animation = 'fadeIn 0.5s ease';
         });
     </script>

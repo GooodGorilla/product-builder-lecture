@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이용약관 - FunTest</title>
-    <meta name="description" content="FunTest 서비스 이용약관입니다. 서비스 이용 전 반드시 읽어주세요.">
+    <meta name="description" content="FunTest 서비스 이용약관입니다.">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7091768814337632"
      crossorigin="anonymous"></script>
@@ -15,11 +15,15 @@
         <div class="nav-container">
             <a href="index.html" class="logo">FunTest</a>
             <ul class="nav-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="animal.html">동물상 테스트</a></li>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="contact.html">문의</a></li>
+                <li><a href="index.html" data-i18n="nav_home">홈</a></li>
+                <li><a href="animal.html" data-i18n="nav_animal_test">동물상 테스트</a></li>
+                <li><a href="about.html" data-i18n="nav_about">소개</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">문의</a></li>
             </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="ko">한국어</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
             <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -28,7 +32,7 @@
         </div>
     </nav>
 
-    <div class="page-container">
+    <div class="page-container" id="terms-content-ko">
         <h1>이용약관</h1>
         <p><strong>최종 수정일: 2024년 1월</strong></p>
 
@@ -51,50 +55,85 @@
             <li>저녁 메뉴 추천</li>
             <li>기타 부가 서비스</li>
         </ul>
-        <p>서비스는 연중무휴, 1일 24시간 제공함을 원칙으로 합니다. 단, 시스템 정기점검, 증설 및 교체, 기타 불가피한 사유로 서비스가 일시 중단될 수 있습니다.</p>
 
         <h2>제4조 (서비스의 변경 및 중단)</h2>
-        <p>서비스는 상당한 이유가 있는 경우 운영상, 기술상의 필요에 따라 제공하고 있는 서비스를 변경할 수 있습니다. 서비스 내용의 변경이 있는 경우 변경된 서비스 내용을 공지합니다.</p>
+        <p>서비스는 상당한 이유가 있는 경우 운영상, 기술상의 필요에 따라 제공하고 있는 서비스를 변경할 수 있습니다.</p>
 
         <h2>제5조 (이용자의 의무)</h2>
         <p>이용자는 다음 행위를 하여서는 안 됩니다:</p>
         <ul>
-            <li>서비스 이용 신청 또는 변경 시 허위 정보 등록</li>
             <li>서비스에 게시된 정보의 무단 변경</li>
-            <li>서비스가 정한 정보 이외의 정보(컴퓨터 프로그램 등) 송신 또는 게시</li>
             <li>서비스 및 기타 제3자의 저작권 등 지적재산권에 대한 침해</li>
-            <li>서비스 및 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위</li>
-            <li>외설 또는 폭력적인 메시지, 화상, 음성 기타 공서양속에 반하는 정보 공개 또는 게시</li>
             <li>서비스의 정상적인 운영을 방해하는 행위</li>
         </ul>
 
         <h2>제6조 (콘텐츠의 성격)</h2>
-        <p>서비스에서 제공하는 테스트 결과(동물상 테스트 등)는 엔터테인먼트 목적으로만 제공됩니다:</p>
+        <p>서비스에서 제공하는 테스트 결과는 엔터테인먼트 목적으로만 제공됩니다:</p>
         <ul>
-            <li>테스트 결과는 과학적으로 검증된 것이 아니며, 재미로 즐기는 용도입니다.</li>
+            <li>테스트 결과는 과학적으로 검증된 것이 아닙니다.</li>
             <li>AI 모델의 분석은 학습된 패턴에 기반하며 절대적인 정확성을 보장하지 않습니다.</li>
-            <li>테스트 결과에 대해 서비스는 어떠한 법적 책임도 지지 않습니다.</li>
         </ul>
 
         <h2>제7조 (저작권)</h2>
-        <p>서비스가 작성한 저작물에 대한 저작권 기타 지적재산권은 서비스에 귀속됩니다. 이용자는 서비스를 이용함으로써 얻은 정보를 서비스의 사전 승인 없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게 이용하게 하여서는 안 됩니다.</p>
+        <p>서비스가 작성한 저작물에 대한 저작권 기타 지적재산권은 서비스에 귀속됩니다.</p>
 
         <h2>제8조 (면책조항)</h2>
-        <ul>
-            <li>서비스는 천재지변, 전쟁, 기간통신사업자의 서비스 중지 등 불가항력적인 사유로 인한 서비스 중단에 대해 책임을 지지 않습니다.</li>
-            <li>서비스는 이용자의 귀책사유로 인한 서비스 이용의 장애에 대하여 책임을 지지 않습니다.</li>
-            <li>서비스는 이용자가 서비스를 통해 기대하는 수익을 얻지 못하거나 상실한 것에 대하여 책임을 지지 않습니다.</li>
-            <li>서비스는 이용자가 게재한 정보, 자료, 사실의 신뢰도, 정확성 등 내용에 대해서는 책임을 지지 않습니다.</li>
-        </ul>
-
-        <h2>제9조 (분쟁 해결)</h2>
-        <p>서비스와 이용자 간에 발생한 분쟁에 대하여는 대한민국 법을 적용하며, 분쟁의 해결을 위해 소송이 제기될 경우 서비스 소재지 관할 법원을 전속관할로 합니다.</p>
-
-        <h2>제10조 (약관의 변경)</h2>
-        <p>서비스는 필요한 경우 약관을 변경할 수 있으며, 변경된 약관은 서비스 내 공지사항을 통해 공지합니다. 이용자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단할 수 있습니다.</p>
+        <p>서비스는 천재지변 등 불가항력적인 사유로 인한 서비스 중단에 대해 책임을 지지 않습니다.</p>
 
         <h2>부칙</h2>
         <p>본 약관은 2024년 1월 1일부터 시행됩니다.</p>
+    </div>
+
+    <div class="page-container" id="terms-content-en" style="display: none;">
+        <h1>Terms of Service</h1>
+        <p><strong>Last Updated: January 2024</strong></p>
+
+        <p>These Terms of Service ("Terms") govern your use of FunTest ("Service"). By using the Service, you agree to these Terms.</p>
+
+        <h2>Article 1 (Purpose)</h2>
+        <p>These Terms establish the conditions, procedures, rights, obligations, and responsibilities for using the internet services provided by the Service.</p>
+
+        <h2>Article 2 (Definitions)</h2>
+        <ul>
+            <li><strong>"Service"</strong> means all online content and features provided by FunTest, including Animal Type Test and Menu Recommendations.</li>
+            <li><strong>"User"</strong> means anyone who accesses and uses the Service according to these Terms.</li>
+            <li><strong>"Content"</strong> means all information provided by the Service, including test results, recommendations, text, and images.</li>
+        </ul>
+
+        <h2>Article 3 (Service Provision)</h2>
+        <p>The Service provides the following features:</p>
+        <ul>
+            <li>AI-based Animal Type Test</li>
+            <li>Dinner Menu Recommendations</li>
+            <li>Other supplementary services</li>
+        </ul>
+
+        <h2>Article 4 (Service Changes and Suspension)</h2>
+        <p>The Service may change its offerings for operational or technical reasons when there is a valid reason.</p>
+
+        <h2>Article 5 (User Obligations)</h2>
+        <p>Users must not:</p>
+        <ul>
+            <li>Unauthorized modification of information posted on the Service</li>
+            <li>Infringement of intellectual property rights of the Service or third parties</li>
+            <li>Interference with normal operation of the Service</li>
+        </ul>
+
+        <h2>Article 6 (Nature of Content)</h2>
+        <p>Test results provided by the Service are for entertainment purposes only:</p>
+        <ul>
+            <li>Test results are not scientifically verified.</li>
+            <li>AI model analysis is based on learned patterns and does not guarantee absolute accuracy.</li>
+        </ul>
+
+        <h2>Article 7 (Copyright)</h2>
+        <p>Copyright and other intellectual property rights for works created by the Service belong to the Service.</p>
+
+        <h2>Article 8 (Disclaimer)</h2>
+        <p>The Service is not responsible for service interruptions due to force majeure circumstances such as natural disasters.</p>
+
+        <h2>Supplementary Provisions</h2>
+        <p>These Terms are effective from January 1, 2024.</p>
     </div>
 
     <!-- Footer -->
@@ -102,35 +141,50 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>FunTest</h4>
-                <p>AI 기반 재미있는 테스트 서비스</p>
+                <p data-i18n="footer_description">AI 기반 재미있는 테스트 서비스</p>
             </div>
             <div class="footer-section">
-                <h4>바로가기</h4>
+                <h4 data-i18n="footer_links">바로가기</h4>
                 <ul>
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="animal.html">동물상 테스트</a></li>
-                    <li><a href="menu.html">메뉴 추천</a></li>
-                    <li><a href="about.html">소개</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">홈</a></li>
+                    <li><a href="animal.html" data-i18n="nav_animal_test">동물상 테스트</a></li>
+                    <li><a href="menu.html" data-i18n="menu_test_title">메뉴 추천</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">소개</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>고객지원</h4>
+                <h4 data-i18n="footer_support">고객지원</h4>
                 <ul>
-                    <li><a href="contact.html">문의하기</a></li>
-                    <li><a href="privacy.html">개인정보처리방침</a></li>
-                    <li><a href="terms.html">이용약관</a></li>
+                    <li><a href="contact.html" data-i18n="footer_contact">문의하기</a></li>
+                    <li><a href="privacy.html" data-i18n="footer_privacy">개인정보처리방침</a></li>
+                    <li><a href="terms.html" data-i18n="footer_terms">이용약관</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 FunTest. All rights reserved.</p>
+            <p data-i18n="footer_copyright">© 2024 FunTest. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
             this.classList.toggle('active');
+        });
+
+        // Toggle content based on language
+        function updateTermsContent() {
+            const lang = window.i18n.getCurrentLanguage();
+            document.getElementById('terms-content-ko').style.display = lang === 'ko' ? 'block' : 'none';
+            document.getElementById('terms-content-en').style.display = lang === 'en' ? 'block' : 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', updateTermsContent);
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setTimeout(updateTermsContent, 100);
+            });
         });
     </script>
 </body>
