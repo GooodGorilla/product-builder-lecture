@@ -9,10 +9,10 @@
     "message_label": "Your Message:",
     "send_button": "Send",
     "dinner_menus": [
-        "Steak",
-        "Pasta",
-        "Pizza",
-        "Salad",
-        "Sushi"
+        { "name": "Steak", "image": "https://via.placeholder.com/150/0000FF/808080?Text=Steak" },
+        { "name": "Pasta", "image": "https://via.placeholder.com/150/FF0000/FFFFFF?Text=Pasta" },
+        { "name": "Pizza", "image": "https://via.placeholder.com/150/FFFF00/000000?Text=Pizza" },
+        { "name": "Salad", "image": "https://via.placeholder.com/150/00FF00/000000?Text=Salad" },
+        { "name": "Sushi", "image": "https://via.placeholder.com/150/FF00FF/FFFFFF?Text=Sushi" }
     ]
 }

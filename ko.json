@@ -9,10 +9,10 @@
     "message_label": "메시지:",
     "send_button": "보내기",
     "dinner_menus": [
-        "김치찌개",
-        "된장찌개",
-        "비빔밥",
-        "불고기",
-        "치킨"
+        { "name": "김치찌개", "image": "https://via.placeholder.com/150/FF6347/FFFFFF?Text=Kimchi+Jjigae" },
+        { "name": "된장찌개", "image": "https://via.placeholder.com/150/8B4513/FFFFFF?Text=Doenjang+Jjigae" },
+        { "name": "비빔밥", "image": "https://via.placeholder.com/150/32CD32/FFFFFF?Text=Bibimbap" },
+        { "name": "불고기", "image": "https://via.placeholder.com/150/A52A2A/FFFFFF?Text=Bulgogi" },
+        { "name": "치킨", "image": "https://via.placeholder.com/150/FFD700/000000?Text=Chicken" }
     ]
 }
