@@ -16,6 +16,8 @@
     <meta name="description" content="AI가 내 얼굴을 분석해 강아지상인지 고양이상인지 알려주는 동물상 테스트입니다. 웹캠 또는 사진 업로드로 빠르고 재미있게 나의 동물상을 찾아보세요!">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7091768814337632"
@@ -160,6 +162,42 @@
             color: #555;
             line-height: 1.6;
         }
+        .share-container {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            display: none;
+            text-align: center;
+        }
+        .share-container h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .share-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+            font-size: 24px;
+        }
+        .share-btn:hover {
+            transform: scale(1.1);
+        }
+        .share-btn.kakao { background-color: #FEE500; color: #191919; }
+        .share-btn.facebook { background-color: #1877F2; color: white; }
+        .share-btn.twitter { background-color: #1DA1F2; color: white; }
+        .share-btn.copy-link { background-color: #e0e0e0; color: #333; }
         .loading { display: none; margin: 20px 0; }
         .loading.show { display: block; }
         .spinner {
@@ -294,6 +332,16 @@
                 <div class="result-title" id="result-title"></div>
                 <div class="probability-bars" id="probability-bars"></div>
                 <div class="description" id="result-description"></div>
+
+                <div class="share-container" id="share-container">
+                    <h3>결과 공유하기</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn kakao" id="kakao-share-btn"><i class="fas fa-comment"></i></button>
+                        <button class="share-btn facebook" id="facebook-share-btn"><i class="fab fa-facebook-f"></i></button>
+                        <button class="share-btn twitter" id="twitter-share-btn"><i class="fab fa-twitter"></i></button>
+                        <button class="share-btn copy-link" id="copy-link-btn"><i class="fas fa-link"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -514,6 +562,7 @@
             const isDog = dogProb > catProb;
             const dogLabel = window.i18n.t('dog_type');
             const catLabel = window.i18n.t('cat_type');
+            const resultText = isDog ? dogLabel : catLabel;
 
             if (isDog) {
                 resultIcon.textContent = '🐕';
@@ -553,7 +602,75 @@
             resultDescription.textContent = window.i18n.t(randomKey);
 
             resultContainer.classList.add('show');
+            
+            // Show and setup share buttons
+            const shareContainer = document.getElementById('share-container');
+            shareContainer.style.display = 'block';
+            setupShareButtons(resultText);
         }
+
+        function setupShareButtons(resultText) {
+            // IMPORTANT: Please insert your own Kakao Javascript Key
+            // 중요: 본인의 카카오 자바스크립트 키를 입력해주세요
+            const KAKAO_APP_KEY = 'YOUR_KAKAO_APP_KEY';
+            if (KAKAO_APP_KEY === 'YOUR_KAKAO_APP_KEY') {
+                console.warn('Please enter your Kakao App Key for the share feature to work.');
+                document.getElementById('kakao-share-btn').style.display = 'none';
+            } else if (!Kakao.isInitialized()) {
+                Kakao.init(KAKAO_APP_KEY);
+            }
+            
+            const shareUrl = window.location.href;
+            const shareTitle = `내 동물상 테스트 결과는 '${resultText}'입니다!`;
+            const shareDescription = `재미있는 AI 동물상 테스트, FunTest에서 당신의 동물상도 확인해보세요!`;
+
+            // Kakao Share
+            document.getElementById('kakao-share-btn').onclick = () => {
+                if (KAKAO_APP_KEY === 'YOUR_KAKAO_APP_KEY') return;
+                Kakao.Share.sendDefault({
+                    objectType: 'feed',
+                    content: {
+                        title: shareTitle,
+                        description: shareDescription,
+                        imageUrl: 'https://product-builder-lecture-5s2.pages.dev/images/sushi-9761708_1920.png', // Main image
+                        link: {
+                            mobileWebUrl: shareUrl,
+                            webUrl: shareUrl,
+                        },
+                    },
+                    buttons: [
+                        {
+                            title: '나도 테스트하기',
+                            link: {
+                                mobileWebUrl: shareUrl,
+                                webUrl: shareUrl,
+                            },
+                        },
+                    ],
+                });
+            };
+
+            // Facebook Share
+            document.getElementById('facebook-share-btn').onclick = () => {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+            };
+
+            // Twitter Share
+            document.getElementById('twitter-share-btn').onclick = () => {
+                const text = `${shareTitle} ${shareDescription}`;
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+            };
+
+            // Copy Link
+            document.getElementById('copy-link-btn').onclick = () => {
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    alert('링크가 복사되었습니다!');
+                }, () => {
+                    alert('링크 복사에 실패했습니다.');
+                });
+            };
+        }
+
 
         function hideResult() {
             document.getElementById('result-container').classList.remove('show');
